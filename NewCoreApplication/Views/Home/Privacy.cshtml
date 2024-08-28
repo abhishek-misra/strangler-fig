@@ -1,0 +1,30 @@
+﻿@model List<PrivacyViewModel>
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="aspnetTitle">Privacy - Dot NET Core</h1>
+        <p class="lead">This page is rendered from .Net Core Application. Page Type is CSHTML page</p>
+        <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+    </section>
+
+    <div class="row">
+        
+        @foreach (var item in Model)
+        {
+            <section class="col-md-4" aria-labelledby="@item.Title">
+                <h2 id="@item.Title">@item.Title</h2>
+                <p>
+                    @item.Description
+                </p>
+                <p>
+                    <a class="btn btn-default" href="/Home/Privacy">Visit Page &raquo;</a>
+                </p>
+            </section>
+        }
+
+       
+    </div>
+</main>
